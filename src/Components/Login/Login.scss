@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+  }
+  
+  .login-outer-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fafafa;
+  
+    .login-container {
+      width: 476px;
+      height: 206px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  
+      .header-title {
+        width: 182.5px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      .login-inner-container {
+        margin-top: 52px;
+        width: 476px;
+        height: 482px;
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 8px;
+  
+        .login {
+          margin-bottom: 10px;
+        }
+  
+        .login-para {
+          margin-bottom: 40px;
+          color: #737373;
+          font-size: 0.9rem;
+        }
+  
+        .email {
+          position: relative;
+          margin-bottom: 24px;
+  
+          .email-address {
+            margin-bottom: 10px;
+            font-size: 0.8rem;
+            color: #333333;
+          }
+  
+          .email-address-error {
+            margin-bottom: 10px;
+            font-size: 0.8rem;
+            color: #ff3939;
+          }
+  
+          .email-input {
+            width: 100%;
+            height: 40px;
+            border-radius: 8px;
+            border: 1px solid #d9d9d9;
+            padding-left: 40px;
+          }
+  
+          .email-input-error {
+            width: 100%;
+            height: 40px;
+            border-radius: 8px;
+            border: 1px solid #ff3939;
+            padding-left: 40px;
+          }
+  
+          svg {
+            position: absolute;
+            top: 38px;
+            left: 15px;
+          }
+  
+          .email-input:focus {
+            outline: none;
+            border: 1px solid #633cff;
+            box-shadow: 0px 0px 20px 1px #beadff;
+            caret-color: #633cff;
+          }
+  
+          .empty-email {
+            position: absolute;
+            top: 37px;
+            left: 290px;
+            font-size: 0.8rem;
+            color: #ff3939;
+          }
+        }
+  
+        .password-container {
+          position: relative;
+          margin-bottom: 24px;
+  
+          .password-para {
+            margin-bottom: 10px;
+            font-size: 0.8rem;
+            color: #333333;
+          }
+  
+          .password-para-error {
+            margin-bottom: 10px;
+            font-size: 0.8rem;
+            color: #ff3939;
+          }
+  
+          .password-input {
+            width: 100%;
+            height: 40px;
+            border-radius: 8px;
+            border: 1px solid #d9d9d9;
+            padding-left: 40px;
+          }
+  
+          .password-input-error {
+            width: 100%;
+            height: 40px;
+            border-radius: 8px;
+            border: 1px solid #ff3939;
+            padding-left: 40px;
+          }
+  
+          svg {
+            position: absolute;
+            top: 36px;
+            left: 15px;
+          }
+  
+          .password-input:focus {
+            outline: none;
+            border: 1px solid #633cff;
+            box-shadow: 0px 0px 20px 1px #beadff;
+            caret-color: #633cff;
+          }
+  
+          .empty-password {
+            position: absolute;
+            top: 37px;
+            left: 265px;
+            font-size: 0.8rem;
+            color: #ff3939;
+          }
+        }
+  
+        .submitBtn {
+          margin-bottom: 24px;
+          width: 100%;
+          height: 40px;
+          border: none;
+          background-color: #633cff;
+          border-radius: 8px;
+          box-shadow: 0px 2px 4px 1px #737373;
+          color: #ffffff;
+          font-size: medium;
+          font-weight: 500;
+        }
+  
+        .submitBtn:hover {
+          background-color: #beadff;
+          box-shadow: none;
+        }
+  
+        .create-account-para {
+          font-size: 0.9rem;
+          text-align: center;
+          color: #737373;
+  
+          a {
+            text-decoration: none;
+            color: #633cff;
+          }
+        }
+      }
+    }
+  }
+  
