@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+
+    .CreateAccount-outer-container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #fafafa;
+    }
+
+    .createaccount-container {
+        width: 476px;
+        height: 618;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ca-header-title {
+        width: 182.5px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 51px;
+    }
+
+    .ca-inner-container {
+        width: 476px;
+        height: 580px;
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 8px;
+
+        .ca-title {
+            margin-bottom: 20px;
+        }
+
+        .ca-para {
+            margin-bottom: 40px;
+            color: #737373;
+            font-size: 0.9rem;
+        }
+
+        .ca-form {
+
+            .email-container {
+                position: relative;
+                margin-bottom: 24px;
+
+                .ca-email-label {
+                    margin-bottom: 10px;
+                    font-size: 0.8rem;
+                    color: #333333;
+                }
+
+                .ca-email-label-empty {
+                    margin-bottom: 10px;
+                    font-size: 0.8rem;
+                    color: #ff3939;
+                }
+
+                .ca-email-input {
+                    width: 100%;
+                    height: 40px;
+                    border-radius: 8px;
+                    border: 1px solid #d9d9d9;
+                    padding-left: 40px;
+                }
+
+                .ca-email-input::placeholder{
+                    color: #a4a3a3;
+                    font-weight: 100;
+                }
+
+                .ca-email-input-empty{
+                    width: 100%;
+                    height: 40px;
+                    border-radius: 8px;
+                    border: 1px solid #ff3939;
+                    padding-left: 40px;
+                }
+
+                .ca-email-input:focus {
+                    outline: none;
+                    border: 1px solid #633cff;
+                    box-shadow: 0px 0px 20px 1px #beadff;
+                    caret-color: #633cff;
+                }
+
+                svg {
+                    position: absolute;
+                    top: 38px;
+                    left: 15px;
+                }
+
+                .ca-empty-email {
+                    position: absolute;
+                    top: 37px;
+                    left: 290px;
+                    font-size: 0.8rem;
+                    color: #ff3939;
+                }
+            }
+
+            .create-password-container {
+                position: relative;
+                margin-bottom: 24px;
+
+                .ca-password-label {
+                    margin-bottom: 10px;
+                    font-size: 0.8rem;
+                    color: #333333;
+                }
+
+                .ca-password-label-empty{
+                    margin-bottom: 10px;
+                    font-size: 0.8rem;
+                    color: #ff3939;
+                }
+
+                .ca-password-input {
+                    width: 100%;
+                    height: 40px;
+                    border-radius: 8px;
+                    border: 1px solid #d9d9d9;
+                    padding-left: 40px;
+                }
+
+                .ca-password-input-empty {
+                    width: 100%;
+                    height: 40px;
+                    border-radius: 8px;
+                    border: 1px solid #ff3939;
+                    padding-left: 40px;
+                }
+
+                .ca-password-input:focus{
+                    outline: none;
+                    border: 1px solid #633cff;
+                    box-shadow: 0px 0px 20px 1px #beadff;
+                    caret-color: #633cff;
+                }
+
+                .ca-password-input::placeholder {
+                    color: #a4a3a3;
+                    font-weight: 100;
+                }
+
+                svg {
+                    position: absolute;
+                    top: 36px;
+                    left: 15px;
+                }
+
+                .ca-empty-password {
+                    position: absolute;
+                    top: 37px;
+                    left: 265px;
+                    font-size: 0.8rem;
+                    color: #ff3939;
+                }
+            }
+
+            .confirm-password-container {
+                position: relative;
+                margin-bottom: 24px;
+
+                .confirm-ca-password-label {
+                    margin-bottom: 10px;
+                    font-size: 0.8rem;
+                    color: #333333;
+                }
+
+                .confirm-ca-password-label-empty{
+                    margin-bottom: 10px;
+                    font-size: 0.8rem;
+                    color: #ff3939;
+                }
+
+                .confirm-ca-password-input {
+                    width: 100%;
+                    height: 40px;
+                    border-radius: 8px;
+                    border: 1px solid #d9d9d9;
+                    padding-left: 40px;
+                }
+
+                .confirm-ca-password-input:focus {
+                    outline: none;
+                    border: 1px solid #633cff;
+                    box-shadow: 0px 0px 20px 1px #beadff;
+                    caret-color: #633cff;
+                }
+
+                .confirm-ca-password-input-empty{
+                    width: 100%;
+                    height: 40px;
+                    border-radius: 8px;
+                    border: 1px solid #ff3939;
+                    padding-left: 40px;
+                }
+
+                .confirm-ca-password-input::placeholder {
+                    color: #a4a3a3;
+                    font-weight: 100;
+                }
+
+                svg {
+                    position: absolute;
+                    top: 36px;
+                    left: 15px;
+                }
+
+                .confirm-ca-diff-password {
+                    position: absolute;
+                    top: 37px;
+                    left: 233px;
+                    font-size: 0.8rem;
+                    color: #ff3939;
+                }
+                .confirm-ca-password-empty{
+                    position: absolute;
+                    top: 37px;
+                    left: 265px;
+                    font-size: 0.8rem;
+                    color: #ff3939;
+                }
+            }
+
+            .ca-pass-instruction {
+                font-size: 0.8rem;
+                color: #737373;
+                margin-bottom: 24px;
+            }
+
+            .ca-pass-instruction-mismatchlength {
+                font-size: 0.8rem;
+                color: #ff3939;
+                margin-bottom: 24px;
+            }
+
+            .ca-submitBtn {
+                margin-bottom: 24px;
+                width: 100%;
+                height: 40px;
+                border: none;
+                background-color: #633cff;
+                border-radius: 8px;
+                color: #ffffff;
+                font-size: medium;
+                font-weight: 300;
+                font-size: 0.9rem;
+                transition: 0.2s;
+            }
+
+            .ca-submitBtn:hover{
+            background-color: #beadff;
+        }
+
+        }
+
+        .login-account {
+            font-size: 0.9rem;
+            text-align: center;
+            color: #737373;
+
+            a {
+                text-decoration: none;
+                color: #633cff;
+            }
+        }
+
+    }
+
+}
