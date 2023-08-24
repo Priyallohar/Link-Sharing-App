@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "./DashBoardHeader.scss";
 
 const DashboardHeader = () => {
+
+  const[islinkClick , setIsLinkClick] = useState(false)
+  const[isProfileDetailClick , setIsProfileDetailClick] = useState(false)
+
+  const linkclickStyleHandler = ()=>{
+    setIsLinkClick(true)
+    setIsProfileDetailClick(false)
+  }
+
+  const profileClickStyleHandler = ()=>{
+    setIsProfileDetailClick(true)
+    setIsLinkClick(false)
+  }
+
   return (
-    <div className="dashboard-outer-container">
+    <div className="dashboardheader-outer-container">
       <header className="dash-header">
         <div className="dash-title">
           <svg
@@ -24,7 +38,7 @@ const DashboardHeader = () => {
         </div>
 
         <div className="profile-link-container">
-          <div className="links">
+          <div className={`links ${islinkClick?"click":""}`} onClick={linkclickStyleHandler}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -39,7 +53,8 @@ const DashboardHeader = () => {
             </svg>
             <a>Links</a>
           </div>
-          <div className="profile">
+
+          <div className={`profile ${isProfileDetailClick ?"click":""}`} onClick={profileClickStyleHandler}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="21"

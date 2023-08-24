@@ -1,5 +1,4 @@
-.dashboard-outer-container{
-    height: 100vh;
+.dashboardheader-outer-container{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -13,6 +12,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
         background-color: #FFFFFF;
         border-radius: 8px;
 
@@ -53,7 +53,24 @@
         
             }
 
-            
+            .links.click{
+                background-color: #EFEBFF;
+                border-radius: 8px;
+
+                svg{
+                    path{
+                        fill: #633CFF;
+                    }
+                }
+
+                a{
+                    padding-left: 5px;
+                    color: #633CFF;
+                    font-size: 0.9rem;
+                    font-weight: 500;
+                }
+            }
+
 
             .profile{
                 display: flex;
@@ -79,6 +96,23 @@
                     a{
                         color: #633CFF;
                     }
+                }
+            }
+
+            .profile.click{
+                background-color: #EFEBFF;
+                border-radius: 8px;
+                svg{
+                    path{
+                        fill: #633CFF;
+                    }
+                }
+
+                a{
+                    padding-left: 5px;
+                    color: #633CFF;
+                    font-size: 0.9rem;
+                    font-weight: 500;
                 }
             }
         }

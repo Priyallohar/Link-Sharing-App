@@ -3,6 +3,7 @@ import { BrowserRouter , Route, Routes} from 'react-router-dom';
 import Login from './Components/Login/Login'
 import Createaccount from './Components/Createaccount/Createaccount'
 import DashboardHeader from './Components/devlinksdashboard/DashboardHeader/DashboardHeader';
+import Dashboard from './Components/devlinksdashboard/Dashboard/Dashboard';
 
 const App = () => {
   return (
@@ -15,7 +16,7 @@ const App = () => {
     //   </Routes>
     // </BrowserRouter>
     <div>
-    <DashboardHeader></DashboardHeader>
+<Dashboard></Dashboard>
 
     </div>
   );
