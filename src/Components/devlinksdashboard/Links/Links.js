@@ -4,8 +4,8 @@ import "./Links.scss";
 const Links = () => {
   return (
     <div className="links-outer-container">
-
-        <div className="links-inner-container">
+{/* 
+        <div className="links-inner-container"> */}
       <div className="Phone-mockup">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +48,7 @@ const Links = () => {
           <button>Save</button>
         </div>
       </div>
-      </div>
+      {/* </div> */}
     </div>
   );
 };
