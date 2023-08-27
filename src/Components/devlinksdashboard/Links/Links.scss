@@ -51,8 +51,8 @@
     
             .customize-link-inner-container{
                 padding: 40px;
-                height: 715px;
-                // overflow-y: auto;
+                min-height: 87vh;;
+                overflow-y: auto;
     
                 h2{
                     margin-bottom: 20px;
