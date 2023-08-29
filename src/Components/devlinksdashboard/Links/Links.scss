@@ -25,6 +25,7 @@
         .Phone-mockup {
             flex-shrink: 1;
             display: flex;
+            min-height: 98vh;
             align-items: center;
             justify-content: center;
             flex: 1;
@@ -50,6 +51,8 @@
        
     
             .customize-link-inner-container{
+                display: flex;
+                flex-direction: column;
                 padding: 40px;
                 min-height: 87vh;;
                 overflow-y: auto;
@@ -65,8 +68,35 @@
                     word-spacing: 2px;
                     margin-bottom: 50px;
                 }
+                .addBtnLink{
+                    height: 46px;
+                   border: 1px solid #633CFF;
+                    color: #633CFF;;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                   width: 100%;
+                    border-radius: 8px;
+                    word-spacing: 3px;
+                    font-weight: 500;
+                    background-color: #FFFFFF;
+                  }
+
+                  .add-link-container{
+                    display: flex;
+                    flex-direction: column;
+                    height: 228px;
+                    flex-grow: 1;
+                    margin-top: 24px;
+                    border: 1px solid #737373;
+                    padding: 20px;
+
+                    .link-add{
+                        background-color: #D9D9D9;
+                    }
+                  }
             }
-    
+              
             .saveBtn-container{
                 display: flex;
                 height: 94px;

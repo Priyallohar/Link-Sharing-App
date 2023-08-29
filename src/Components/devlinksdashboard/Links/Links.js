@@ -1,10 +1,11 @@
 import React from "react";
 import "./Links.scss";
+import {HiMenuAlt4} from "react-icons/hi"
 
 const Links = () => {
   return (
     <div className="links-outer-container">
-{/* 
+      {/* 
         <div className="links-inner-container"> */}
       <div className="Phone-mockup">
         <svg
@@ -36,12 +37,19 @@ const Links = () => {
 
       <div className="customize-link-outer-container">
         <div className="customize-link-inner-container">
+          <h2>Customize you links</h2>
+          <p>
+            Add/edit/remove links below and then share your profiles with the
+            world!
+          </p>
 
-        <h2>Customize you links</h2>
-        <p>Add/edit/remove links below and then share your profiles with the world!</p>
+          <button className="addBtnLink">+ Add new link</button>
+          <div className="add-link-container">
+            <div className="link-add">
+            <p><HiMenuAlt4/> Link</p>
 
-        {/* <div></div> */}
-
+            </div>
+          </div>
         </div>
 
         <div className="saveBtn-container">
