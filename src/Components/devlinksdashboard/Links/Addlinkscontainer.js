@@ -1,7 +1,7 @@
 import React , {useState}from "react";
 import "./addlinkscontainer.scss";
 import { HiMenuAlt4 } from "react-icons/hi";
-import {MdKeyboardArrowDown} from "react-icons/md"
+import {RiArrowDropDownLine} from "react-icons/ri"
 
 
 const SvgLinks = {
@@ -209,8 +209,8 @@ const Addlinkscontainer = () => {
         </header>
     
       <div className="platform-container">
-        <p className="platform-title">Platform</p>
-        <p><MdKeyboardArrowDown/></p>
+        <p className="platform-title">Platform  <RiArrowDropDownLine className= "arrow-svg" /></p>
+       
        {SvgLinks[selectedOption]}
         {/* <p disabled selected className="first-option">Select Platform</p> */}
         <select name="platform" id="platform" onChange={optionChangeHandler}>

@@ -30,9 +30,20 @@
         
         
         .platform-title,.link-title{
+            width: 100%;
+            display: flex;
             font-size: smaller;
             margin-bottom: 8px;
             color: #737373;
+            position: relative; 
+
+            .arrow-svg{
+                position: absolute;
+               justify-self: flex-end;
+               right: 0;
+                top: 0px;
+                font-size: 30px;
+            }
         }
 
        .platform-container{
