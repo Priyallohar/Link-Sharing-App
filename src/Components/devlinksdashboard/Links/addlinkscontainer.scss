@@ -35,13 +35,14 @@
             font-size: smaller;
             margin-bottom: 8px;
             color: #737373;
-            position: relative; 
+            position: relative;
 
             .arrow-svg{
+                justify-items: end;
                 position: absolute;
-               justify-self: flex-end;
-               right: 0;
-                top: 0px;
+                // right: 0; 
+                // top: 50%; 
+                // transform: translate(2300%, 90%); 
                 font-size: 30px;
             }
         }
