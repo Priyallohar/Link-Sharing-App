@@ -216,6 +216,7 @@ const Addlinkscontainer = () => {
         <select name="platform" id="platform" onChange={optionChangeHandler}>
           <option value="github">GitHub</option>
           <option value="codewar">Code Pen</option>
+          <option value="gitlab">Dev To</option>
           <option value="facebook">Facebook</option>
           <option value="linkdin">Linkedin</option>
           <option value="youtube">You Tube</option>
