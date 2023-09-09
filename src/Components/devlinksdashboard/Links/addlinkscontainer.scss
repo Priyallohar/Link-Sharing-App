@@ -36,13 +36,11 @@
             margin-bottom: 8px;
             color: #737373;
             position: relative;
+            justify-content: space-between;
+            flex-direction: row;
 
             .arrow-svg{
-                justify-items: end;
                 position: absolute;
-                // right: 0; 
-                // top: 50%; 
-                // transform: translate(2300%, 90%); 
                 font-size: 30px;
             }
         }
