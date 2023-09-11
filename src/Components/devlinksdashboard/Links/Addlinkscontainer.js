@@ -209,9 +209,10 @@ const Addlinkscontainer = () => {
         </header>
     
       <div className="platform-container">
-        <p className="platform-title">Platform  <RiArrowDropDownLine className= "arrow-svg" /></p>
+        <p className="platform-title">Platform  <div className="downarrow-svg"><RiArrowDropDownLine className= "arrow-svg" /></div></p>
        
-       {SvgLinks[selectedOption]}
+       
+       <div className="platformlinks">{SvgLinks[selectedOption]}</div>
         {/* <p disabled selected className="first-option">Select Platform</p> */}
         <select name="platform" id="platform" onChange={optionChangeHandler}>
           <option value="github">GitHub</option>

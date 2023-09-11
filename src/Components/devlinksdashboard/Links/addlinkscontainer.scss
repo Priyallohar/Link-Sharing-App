@@ -31,7 +31,7 @@
         
         .platform-title,.link-title{
             width: 100%;
-            display: flex;
+            display:grid;
             font-size: smaller;
             margin-bottom: 8px;
             color: #737373;
@@ -39,16 +39,21 @@
             justify-content: space-between;
             flex-direction: row;
 
-            .arrow-svg{
+            .downarrow-svg{
                 position: absolute;
-                font-size: 30px;
+                font-size: 35px;
+                justify-self: flex-end;
+                top: 32px;
+                right: 10px;
+                color: #633CFF;
+                font-weight: 400;
             }
         }
 
        .platform-container{
             position: relative;
 
-            svg{
+            .platformlinks{
                 position: absolute;
                 top: 40px;
                 left: 15px;
