@@ -52,11 +52,12 @@
 
        .platform-container{
             position: relative;
+            margin-bottom: 12px;
 
             .platformlinks{
-                position: absolute;
-                top: 40px;
-                left: 15px;
+                height: 48px;
+                width: 100%;
+                background-color: #FFFFFF;
             }
         }
 
@@ -67,20 +68,6 @@
                 position: absolute;
                 top: 40px;
                 left: 15px;
-            }
-        }
-        select{
-            appearance: none;
-            padding-left: 40px;
-            padding-right: 20px;
-            height: 48px;
-            width: 100%;
-            margin-bottom: 12px;
-            border: none;
-            border-radius: 8px;
-
-            .first-option{
-                color: rgba(115, 115, 115, 0.5);
             }
         }
 
@@ -101,6 +88,12 @@
             color: #737373;
             margin-bottom: 12px;
             font-weight: 600;
+            justify-content: space-between;
+
+            .removebtn{
+                background-color: none;
+                
+            }
         }
     }
 }
