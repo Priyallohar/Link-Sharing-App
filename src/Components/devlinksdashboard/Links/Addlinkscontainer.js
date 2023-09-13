@@ -205,28 +205,15 @@ const Addlinkscontainer = () => {
     <div className="add-link-container">
       <div className="link-add">
         <header className="title">
-          <HiMenuAlt4 /> Link
+          <div><HiMenuAlt4 /> Link</div> <button className="removebtn">Remove</button>
         </header>
     
       <div className="platform-container">
         <p className="platform-title">Platform  <div className="downarrow-svg"><RiArrowDropDownLine className= "arrow-svg" /></div></p>
        
        
-       <div className="platformlinks">{SvgLinks[selectedOption]}</div>
-        {/* <p disabled selected className="first-option">Select Platform</p> */}
-        <select name="platform" id="platform" onChange={optionChangeHandler}>
-          <option value="github">GitHub</option>
-          <option value="codewar">Code Pen</option>
-          <option value="gitlab">Dev To</option>
-          <option value="facebook">Facebook</option>
-          <option value="linkdin">Linkedin</option>
-          <option value="youtube">You Tube</option>
-          <option value="freecodecamp">Freecode Camp</option>
-          <option value="frontendmentor">Frontend Mentor</option>
-          <option value="stackoverflow">Stack Overflow</option>
-          <option value="twitter">Twitter</option>
-          <option value="gitlab">Gitlab</option>
-        </select>
+       <input className="platformlinks" placeholder="Select platform"></input>
+        
       </div>
 
       <div className="url-container">
