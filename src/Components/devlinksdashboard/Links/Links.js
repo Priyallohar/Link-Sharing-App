@@ -2,7 +2,8 @@ import React from "react";
 import "./Links.scss";
 
 import Letgetstarted from "./Letgetstarted";
-import Addlinkscontainer from "./Addlinkscontainer";
+import Linksaddcontainer from "./Linksaddcontainer";
+
 
 const Links = () => {
   return (
@@ -48,8 +49,10 @@ const Links = () => {
 
             <button className="addBtnLink">+ Add new link</button>
           </div>
-         {/* <Letgetstarted></Letgetstarted> */}
-         <Addlinkscontainer></Addlinkscontainer>
+          {/* <Letgetstarted></Letgetstarted> */}
+          <div className="add-link-container">
+            <Linksaddcontainer></Linksaddcontainer>
+          </div>
         </div>
 
         <div className="saveBtn-container">

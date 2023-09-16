@@ -1,0 +1,85 @@
+.link-add {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    background-color: #FAFAFA;
+    height: 228px;
+    margin-bottom: 24px;
+    padding: 20px;
+    border-radius: 8px;
+
+    .platform-title,
+    .link-title {
+        width: 100%;
+        display: grid;
+        font-size: smaller;
+        margin-bottom: 8px;
+        color: #737373;
+        position: relative;
+        justify-content: space-between;
+        flex-direction: row;
+
+        .downarrow-svg {
+            position: absolute;
+            font-size: 35px;
+            justify-self: flex-end;
+            top: 32px;
+            right: 10px;
+            color: #633CFF;
+            font-weight: 400;
+        }
+    }
+
+    .platform-container {
+        position: relative;
+        margin-bottom: 12px;
+
+        .platformlinks {
+            height: 48px;
+            width: 100%;
+            background-color: #FFFFFF;
+        }
+
+        
+    }
+
+    .url-container {
+        position: relative;
+
+        svg {
+            position: absolute;
+            top: 40px;
+            left: 15px;
+        }
+    }
+
+    input {
+        height: 48px;
+        width: 100%;
+        border: none;
+        border-radius: 8px;
+        padding-left: 40px;
+
+        &::placeholder {
+            color: rgba(115, 115, 115, 0.5);
+        }
+    }
+
+    .title {
+        display: flex;
+        align-items: center;
+        color: #737373;
+        margin-bottom: 12px;
+        font-weight: 600;
+        justify-content: space-between;
+
+        .removebtn {
+            background-color: #FAFAFA;
+            border: none;
+            color: #737373;
+            font-size: medium;
+
+        }
+    }
+}
