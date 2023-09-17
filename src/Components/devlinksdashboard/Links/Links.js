@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Links.scss";
 
 import Letgetstarted from "./Letgetstarted";
@@ -6,6 +6,12 @@ import Linksaddcontainer from "./Linksaddcontainer";
 
 
 const Links = () => {
+ const[isNewLinkBtnClick , setIsNewLinkBtnClick] =useState(false)
+ const newLinkClickHandler =()=>{
+  setIsNewLinkBtnClick(true)
+ }
+
+
   return (
     <div className="links-outer-container">
       {/* 
@@ -47,12 +53,12 @@ const Links = () => {
               world!
             </p>
 
-            <button className="addBtnLink">+ Add new link</button>
+            <button className="addBtnLink" onClick={newLinkClickHandler}>+ Add new link</button>
           </div>
-          {/* <Letgetstarted></Letgetstarted> */}
-          <div className="add-link-container">
+          {isNewLinkBtnClick? <div className="add-link-container">
             <Linksaddcontainer></Linksaddcontainer>
-          </div>
+          </div>: <Letgetstarted></Letgetstarted>}
+          
         </div>
 
         <div className="saveBtn-container">

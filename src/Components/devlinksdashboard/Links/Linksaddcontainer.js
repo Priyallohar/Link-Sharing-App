@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { HiMenuAlt4 } from "react-icons/hi";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import PlatformDropDown from "./PlatformDropDown";
 import "./linksaddcontainer.scss"
 
 const Linksaddcontainer = () => {
+    const[isInputActivated ,setInputActivated ]=useState(false)
+    const handleInputClick = () => {
+        setInputActivated((prevActivated) => !prevActivated); // Toggle the state
+      };
   return (
           <div className="link-add">
         <header className="title">
@@ -25,6 +29,7 @@ const Linksaddcontainer = () => {
           <input
             className="platformlinks"
             placeholder="Select platform"
+            onFocus={handleInputClick}
           ></input>
         </div>
 
@@ -47,7 +52,7 @@ const Linksaddcontainer = () => {
             placeholder="e.g. https://www.github.com/johnappleseed"
           ></input>
         </div>
-        <PlatformDropDown/>
+        {isInputActivated &&<PlatformDropDown/>}
       </div>
   )
 }
