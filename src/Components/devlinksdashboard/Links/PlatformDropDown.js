@@ -1,10 +1,18 @@
-import React from 'react'
+import React , {useState , useEffect} from 'react'
 import "./PlatformDropDown.scss"
 
 const PlatformDropDown = () => {
+
+    const [selectedPlatform, setSelectedPlatform] = useState(null);
+    const liElements = document.querySelectorAll('.platformName');
+    const liArray = Array.from(liElements);
+    liArray.map(platform => {
+       
+    })
+
+
   return (
     <div>
-
 <div className="platform">
           <ul className="platformList" >
             <li className="platformName">
