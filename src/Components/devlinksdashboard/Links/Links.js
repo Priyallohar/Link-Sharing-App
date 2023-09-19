@@ -7,6 +7,7 @@ import Linksaddcontainer from "./Linksaddcontainer";
 
 const Links = () => {
  const[isNewLinkBtnClick , setIsNewLinkBtnClick] =useState(false)
+ const [linkCount , setLinkCount] = useState(0)
  const newLinkClickHandler =()=>{
   setIsNewLinkBtnClick(true)
  }
