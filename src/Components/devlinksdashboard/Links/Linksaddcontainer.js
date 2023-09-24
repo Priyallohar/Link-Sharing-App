@@ -7,7 +7,7 @@ import "./linksaddcontainer.scss"
 const Linksaddcontainer = () => {
     const[isInputActivated ,setInputActivated ]=useState(false)
     const handleInputClick = () => {
-        setInputActivated((prevActivated) => !prevActivated); // Toggle the state
+        setInputActivated((prevActivated) => !prevActivated); 
       };
   return (
           <div className="link-add">
