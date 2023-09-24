@@ -9,30 +9,7 @@
     background-color: #fafafa;
     overflow: hidden;
 
-
-
-    .Phone-mockup {
-        flex-shrink: 1;
-        display: flex;
-        min-height: 98vh;
-        align-items: center;
-        justify-content: center;
-        flex: 1;
-        background-color: #FFFFFF;
-        border-radius: 8px;
-        margin-right: 24px;
-        padding: 24px;
-        overflow: hidden;
-
-
-        svg {
-            max-width: 100%;
-            height: auto;
-        }
-    }
-
     .customize-link-outer-container {
-        flex-shrink: 1;
         flex: 2;
         background-color: #ffffff;
         border-radius: 8px;
