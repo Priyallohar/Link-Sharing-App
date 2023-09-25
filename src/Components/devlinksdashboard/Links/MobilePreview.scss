@@ -1,21 +1,25 @@
-.Phone-mockup {
-    flex-shrink: 1;
-    display: flex;
-    min-height: 100%;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    background-color: #FFFFFF;
-    border-radius: 8px;
-    margin-right: 24px;
-    padding: 24px;
-    overflow: hidden;
-    flex-shrink: 1;
+.outer-phone-mockup-container {
 
-
-    svg {
-        max-width: 100%;
-        height: auto;
+    .Phone-mockup {
         flex-shrink: 1;
+        display: flex;
+        min-height: 100%;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        background-color: #FFFFFF;
+        border-radius: 8px;
+        margin-right: 24px;
+        padding: 24px;
+        overflow: hidden;
+        flex-shrink: 1;
+        width:560px;
+
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            flex-shrink: 1;
+        }
     }
 }
