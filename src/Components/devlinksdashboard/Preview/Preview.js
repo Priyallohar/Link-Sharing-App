@@ -1,8 +1,11 @@
 import React from 'react'
+import MobilePreview from '../Links/MobilePreview'
 
 const Preview = () => {
   return (
-    <div>Preview</div>
+    <div>
+        <MobilePreview/>
+    </div>
   )
 }
 
