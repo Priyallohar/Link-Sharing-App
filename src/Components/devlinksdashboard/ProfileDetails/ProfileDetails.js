@@ -3,6 +3,7 @@ import "./ProfileDetails.scss"
 import MobilePreview from '../Links/MobilePreview'
 
 const Preview = () => {
+    const [clickButton , setclickButton] = useState(false)
     const [selectedPhotos, setSelectedPhotos] = useState([]);
 
   const handleFileChange = (e) => {
