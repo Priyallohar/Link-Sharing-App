@@ -160,6 +160,9 @@
           font-size: medium;
           font-weight: 500;
           transition: 0.2s;
+          Link{
+            text-decoration: none;
+          }
         }
   
         .submitBtn:hover {

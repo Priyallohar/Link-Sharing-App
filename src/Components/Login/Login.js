@@ -125,10 +125,11 @@ const Login = () => {
                 <p className="empty-password"> Please check agian</p>
               )}
             </div>
-
+            <Link  to="/dashboard">
             <button className="submitBtn" type="submit">
-              Login
+             Login
             </button>
+            </Link>
           </form>
 
           <p className="create-account-para">

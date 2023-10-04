@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./DashBoardHeader.scss";
+import {Link }from "react-router-dom"
 
 const DashboardHeader = () => {
 
@@ -39,6 +40,7 @@ const DashboardHeader = () => {
 
         <div className="profile-link-container">
           <div className={`links ${islinkClick?"click":""}`} onClick={linkclickStyleHandler}>
+            
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -53,7 +55,8 @@ const DashboardHeader = () => {
             </svg>
             <a>Links</a>
           </div>
-
+     
+   
           <div className={`profile ${isProfileDetailClick ?"click":""}`} onClick={profileClickStyleHandler}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -70,10 +73,11 @@ const DashboardHeader = () => {
             <a>Profile Deatils</a>
           </div>
         </div>
-
+       <Link to ="/preview">
         <div className="preview">
           <a>Preview</a>
         </div>
+        </Link>
       </header>
     </div>
   );
