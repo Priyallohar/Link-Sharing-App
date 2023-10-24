@@ -1,8 +1,151 @@
-.dashboard-container{
+.dashboard-container {
     min-height: 100vh;
     background-color: #fafafa;
 
-    .links-container{
+    .dashboardheader-outer-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: #fafafa;
+        font-family: var(--font-family);
+
+        .dash-header {
+            margin: 24px auto;
+            padding: 16px 16px 16px 24px;
+            width: 97%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+
+            .dash-title {
+                display: flex;
+            }
+
+            .profile-link-container {
+                display: flex;
+                align-items: center;
+
+                .links {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100px;
+                    height: 46px;
+                    margin-right: 10px;
+
+                    a {
+                        padding-left: 5px;
+                        color: #737373;
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                    }
+
+                    &:hover {
+                        svg {
+                            path {
+                                fill: #633CFF;
+                            }
+                        }
+
+                        a {
+                            color: #633CFF;
+                        }
+                    }
+
+                }
+
+                .links.click {
+                    background-color: #EFEBFF;
+                    border-radius: 8px;
+
+                    svg {
+                        path {
+                            fill: #633CFF;
+                        }
+                    }
+
+                    a {
+                        padding-left: 5px;
+                        color: #633CFF;
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                    }
+                }
+
+
+                .profile {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 187px;
+                    height: 46px;
+                    margin-right: 30px;
+
+                    a {
+                        padding-left: 5px;
+                        color: #737373;
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                    }
+
+                    &:hover {
+                        svg {
+                            path {
+                                fill: #633CFF;
+                            }
+                        }
+
+                        a {
+                            color: #633CFF;
+                        }
+                    }
+                }
+
+                .profile.click {
+                    background-color: #EFEBFF;
+                    border-radius: 8px;
+
+                    svg {
+                        path {
+                            fill: #633CFF;
+                        }
+                    }
+
+                    a {
+                        padding-left: 5px;
+                        color: #633CFF;
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            .preview {
+                text-decoration: none;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 114px;
+                height: 46px;
+                border: 1px solid #633CFF;
+                border-radius: 8px;
+                color: #633CFF;
+
+                &:hover {
+                    background-color: #EFEBFF;
+                }
+
+            }
+
+
+        }
+    }
+
+    .links-container {
         flex-grow: 1;
     }
 }
