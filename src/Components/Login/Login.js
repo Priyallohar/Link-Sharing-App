@@ -1,13 +1,14 @@
-import React, { useState } from "react";
-import "./Login.scss";
-import { Link } from "react-router-dom";
-import Createaccount from "../Createaccount/Createaccount";
+import React, { useState } from 'react';
+import './Login.scss';
+import { Link } from 'react-router-dom';
+import Createaccount from '../Createaccount/Createaccount';
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [showEmailError, setShowEmailError] = useState(false);
   const [showPasswordError, setShowPasswordError] = useState(false);
+  const [showLoading, setShowLoading] = useState(false);
 
   const HandleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -20,24 +21,16 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (email.trim() === "") {
-      setShowEmailError(true);
-    } else {
-      setShowEmailError(false);
-    }
+    //If email.trim() === "" evaluates to true, setShowEmailEmpty will be set to true; otherwise, it will be set to false.
 
-    if (password.trim() === "") {
-      setShowPasswordError(true);
-    } else {
-      setShowPasswordError(false);
-    }
+    setShowEmailError(email.trim() === '');
+    setShowPasswordError(password.trim() === '');
   };
 
   return (
     <div className="login-outer-container">
       <div className="login-container">
         <header className="header-title">
-          {" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
@@ -52,7 +45,7 @@ const Login = () => {
               clip-rule="evenodd"
             />
           </svg>
-          <h2> devlinks</h2>
+          <h2>DevLinks</h2>
         </header>
 
         <div className="login-inner-container">
@@ -65,15 +58,15 @@ const Login = () => {
             <div className="email">
               <p
                 className={
-                  showEmailError ? "email-address-error" : "email-address"
+                  showEmailError ? 'email-address-error' : 'email-address'
                 }
               >
                 Email address
               </p>
               <input
-                className={showEmailError ? "email-input-error" : "email-input"}
+                className={showEmailError ? 'email-input-error' : 'email-input'}
                 type="email"
-                placeholder="eg.alex@gmail.com"
+                placeholder="alex@gmail.com"
                 value={email}
                 onChange={HandleEmailChange}
               ></input>
@@ -95,14 +88,14 @@ const Login = () => {
             <div className="password-container">
               <p
                 className={
-                  showPasswordError ? "password-para-error" : "password-para"
+                  showPasswordError ? 'password-para-error' : 'password-para'
                 }
               >
                 Password
               </p>
               <input
                 className={
-                  showPasswordError ? "password-input-error" : "password-input"
+                  showPasswordError ? 'password-input-error' : 'password-input'
                 }
                 type="password"
                 placeholder="Enter your password"
@@ -122,13 +115,14 @@ const Login = () => {
                 />
               </svg>
               {showPasswordError && (
-                <p className="empty-password"> Please check agian</p>
+                <p className="empty-password"> Please check again </p>
               )}
             </div>
-            <Link  to="/dashboard">
-            <button className="submitBtn" type="submit">
-             Login
-            </button>
+
+            <Link to="/dashboard">
+              <button className="submitBtn" type="submit">
+                Login
+              </button>
             </Link>
           </form>
 
