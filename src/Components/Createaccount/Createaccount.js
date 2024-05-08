@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Createaccount.scss';
 import { Link } from 'react-router-dom';
 import Login from '../Login/Login';
+import { uiIconSvgLink } from '../../content.js';
 
 const Createaccount = () => {
   const [email, setEmail] = useState('');
@@ -45,20 +46,7 @@ const Createaccount = () => {
     <div className="CreateAccount-outer-container">
       <section className="createaccount-container">
         <header className="ca-header-title">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            fill="none"
-            viewBox="0 0 32 32"
-          >
-            <path
-              fill="#633CFF"
-              fill-rule="evenodd"
-              d="M4.619 27.38c1.954 1.953 5.095 1.953 11.38 1.953 6.286 0 9.429 0 11.38-1.953 1.954-1.95 1.954-5.095 1.954-11.38 0-6.286 0-9.428-1.953-11.381C25.43 2.667 22.285 2.667 16 2.667c-6.286 0-9.428 0-11.381 1.952-1.952 1.954-1.952 5.095-1.952 11.38 0 6.286 0 9.429 1.952 11.38Zm8.047-15.713A4.333 4.333 0 1 0 17 16a1 1 0 0 1 2 0 6.333 6.333 0 1 1-6.334-6.334 1 1 0 1 1 0 2Zm11 4.333a4.333 4.333 0 0 1-4.333 4.333 1 1 0 1 0 0 2A6.333 6.333 0 1 0 13 16a1 1 0 1 0 2 0 4.334 4.334 0 0 1 8.666 0Z"
-              clip-rule="evenodd"
-            />
-          </svg>
+          {uiIconSvgLink['logodevlinkSmall']}
           <h2> devlinks</h2>
         </header>
 
@@ -84,18 +72,7 @@ const Createaccount = () => {
                   showEmailEmpty ? 'ca-email-input-empty' : 'ca-email-input'
                 }
               ></input>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="none"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill="#737373"
-                  d="M14 3H2a.5.5 0 0 0-.5.5V12a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V3.5A.5.5 0 0 0 14 3Zm-.5 9h-11V4.637l5.162 4.732a.5.5 0 0 0 .676 0L13.5 4.637V12Z"
-                />
-              </svg>
+              {uiIconSvgLink['email']}
               {showEmailEmpty && (
                 <p className={'ca-empty-email'}> Can't be empty</p>
               )}
@@ -122,18 +99,7 @@ const Createaccount = () => {
                     : 'ca-password-input'
                 }
               ></input>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="none"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill="#737373"
-                  d="M13 5h-2V3.5a3 3 0 0 0-6 0V5H3a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1ZM8.5 9.914V11.5a.5.5 0 0 1-1 0V9.914a1.5 1.5 0 1 1 1 0ZM10 5H6V3.5a2 2 0 1 1 4 0V5Z"
-                />
-              </svg>
+              {uiIconSvgLink['password']}
               {showPasswordEmpty && (
                 <p className="ca-empty-password"> Please check agian</p>
               )}
@@ -160,18 +126,7 @@ const Createaccount = () => {
                     : 'confirm-ca-password-input'
                 }
               ></input>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="none"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill="#737373"
-                  d="M13 5h-2V3.5a3 3 0 0 0-6 0V5H3a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1ZM8.5 9.914V11.5a.5.5 0 0 1-1 0V9.914a1.5 1.5 0 1 1 1 0ZM10 5H6V3.5a2 2 0 1 1 4 0V5Z"
-                />
-              </svg>
+              {uiIconSvgLink['password']}
               {passwordMatch && (
                 <p className="confirm-ca-diff-password">
                   Password does not match
