@@ -1,9 +1,18 @@
+<<<<<<< Updated upstream
 import React, { useState } from 'react';
 import { HiMenuAlt4 } from 'react-icons/hi';
 import { RiArrowDropDownLine } from 'react-icons/ri';
 import PlatformDropDown from './PlatformDropDown';
 import { uiIconSvgLink } from '../../../content';
 import './linksaddcontainer.scss';
+=======
+import React, { useState } from 'react'
+import { HiMenuAlt4 } from "react-icons/hi";
+import { RiArrowDropDownLine } from "react-icons/ri";
+import "./linksaddcontainer.scss"
+import "./PlatformDropDown.scss"
+import {platformSvgLink , uiIconSvgLink} from "../../../content.js"
+>>>>>>> Stashed changes
 
 const Linksaddcontainer = () => {
   const [isInputActivated, setInputActivated] = useState(false);
