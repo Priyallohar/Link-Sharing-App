@@ -1,14 +1,13 @@
-import React, { useState } from "react";
-import "./Createaccount.scss";
-import { Link } from "react-router-dom";
-import Login from "../Login/Login";
-import { uiIconSvgLink } from "../../content.js";
-
+import React, { useState } from 'react';
+import './Createaccount.scss';
+import { Link } from 'react-router-dom';
+import Login from '../Login/Login';
+import { uiIconSvgLink } from '../../content.js';
 
 const Createaccount = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [showEmailEmpty, setShowEmailEmpty] = useState(false);
   const [showPasswordEmpty, setShowPasswordEmpty] = useState(false);
   const [confirmPasswordEmpty, setConfirmPasswordEmpty] = useState(false);
@@ -21,12 +20,7 @@ const Createaccount = () => {
 
   const passwordHandler = (e) => {
     setPassword(e.target.value);
-
-    if (e.target.value.length < 8) {
-      setPasswordLength(true);
-    } else {
-      setPasswordLength(false);
-    }
+    setPasswordLength(e.target.value.length < 8);
   };
 
   const confirmPasswordHandler = (e) => {
@@ -35,24 +29,10 @@ const Createaccount = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-
-    if (email.trim() === "") {
-      setShowEmailEmpty(true);
-    } else {
-      setShowEmailEmpty(false);
-    }
-
-    if (password.trim() === "") {
-      setShowPasswordEmpty(true);
-    } else {
-      setShowPasswordEmpty(false);
-    }
-
-    if (confirmPassword.trim() === "") {
-      setConfirmPasswordEmpty(true);
-    } else {
-      setConfirmPasswordEmpty(false);
-    }
+    //If email.trim() === "" evaluates to true, setShowEmailEmpty will be set to true; otherwise, it will be set to false.
+    setShowEmailEmpty(email.trim() === '');
+    setShowPasswordEmpty(password.trim() === '');
+    setConfirmPasswordEmpty(confirmPassword.trim() === '');
 
     if (password !== confirmPassword) {
       setPasswordMatch(true);
@@ -66,7 +46,8 @@ const Createaccount = () => {
     <div className="CreateAccount-outer-container">
       <section className="createaccount-container">
         <header className="ca-header-title">
-        {uiIconSvgLink["logodevlinkSmall"]}<h2> devlinks</h2>
+          {uiIconSvgLink['logodevlinkSmall']}
+          <h2> devlinks</h2>
         </header>
 
         <div className="ca-inner-container">
@@ -77,30 +58,32 @@ const Createaccount = () => {
             <div className="email-container ">
               <p
                 className={
-                  showEmailEmpty ? "ca-email-label-empty" : "ca-email-label"
+                  showEmailEmpty ? 'ca-email-label-empty' : 'ca-email-label'
                 }
               >
                 Email address
               </p>
               <input
                 type="email"
-                placeholder="eg.alex@gmail.com"
+                placeholder="alex@gmail.com"
                 value={email}
                 onChange={emailHandler}
                 className={
-                  showEmailEmpty ? "ca-email-input-empty" : "ca-email-input"
+                  showEmailEmpty ? 'ca-email-input-empty' : 'ca-email-input'
                 }
               ></input>
-               {uiIconSvgLink["email"]}
-              {showEmailEmpty && (<p className={"ca-empty-email"}> Can't be empty</p>)}
+              {uiIconSvgLink['email']}
+              {showEmailEmpty && (
+                <p className={'ca-empty-email'}> Can't be empty</p>
+              )}
             </div>
 
             <div className="create-password-container ">
               <p
                 className={
                   showPasswordEmpty
-                    ? "ca-password-label-empty"
-                    : "ca-password-label"
+                    ? 'ca-password-label-empty'
+                    : 'ca-password-label'
                 }
               >
                 Create Password
@@ -112,11 +95,11 @@ const Createaccount = () => {
                 onChange={passwordHandler}
                 className={
                   showPasswordEmpty
-                    ? "ca-password-input-empty"
-                    : "ca-password-input"
+                    ? 'ca-password-input-empty'
+                    : 'ca-password-input'
                 }
               ></input>
-              {uiIconSvgLink["password"]}
+              {uiIconSvgLink['password']}
               {showPasswordEmpty && (
                 <p className="ca-empty-password"> Please check agian</p>
               )}
@@ -126,8 +109,8 @@ const Createaccount = () => {
               <p
                 className={
                   confirmPasswordEmpty
-                    ? "confirm-ca-password-label-empty"
-                    : "confirm-ca-password-label"
+                    ? 'confirm-ca-password-label-empty'
+                    : 'confirm-ca-password-label'
                 }
               >
                 Confirm Password
@@ -139,14 +122,13 @@ const Createaccount = () => {
                 onChange={confirmPasswordHandler}
                 className={
                   confirmPasswordEmpty
-                    ? "confirm-ca-password-input-empty"
-                    : "confirm-ca-password-input"
+                    ? 'confirm-ca-password-input-empty'
+                    : 'confirm-ca-password-input'
                 }
               ></input>
-            {uiIconSvgLink["password"]}
+              {uiIconSvgLink['password']}
               {passwordMatch && (
                 <p className="confirm-ca-diff-password">
-                  {" "}
                   Password does not match
                 </p>
               )}
@@ -158,8 +140,8 @@ const Createaccount = () => {
             <p
               className={
                 passwordLength
-                  ? "ca-pass-instruction-mismatchlength"
-                  : "ca-pass-instruction"
+                  ? 'ca-pass-instruction-mismatchlength'
+                  : 'ca-pass-instruction'
               }
             >
               Password must contain at least 8 characters
