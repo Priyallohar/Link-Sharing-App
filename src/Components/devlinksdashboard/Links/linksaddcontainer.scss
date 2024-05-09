@@ -45,7 +45,7 @@
             color: #633CFF;
             font-weight: 400;
             transition: all 0.3s linear;
-          transform: rotateX(180deg);
+            transform: rotateX(180deg);
         }
 
     }
@@ -58,6 +58,13 @@
             height: 48px;
             width: 100%;
             background-color: #FFFFFF;
+
+            &:focus{
+                outline: none;
+                border: 1px solid #633cff;
+                box-shadow: 0px 0px 20px 1px #beadff;
+                caret-color: #633cff;
+            }
         }
         .choosed-platform{
            position: absolute;
@@ -75,6 +82,15 @@
             position: absolute;
             top: 40px;
             left: 15px;
+        }
+
+        .url-links{
+            &:focus{
+                outline: none;
+                border: 1px solid #633cff;
+                box-shadow: 0px 0px 20px 1px #beadff;
+                caret-color: #633cff;
+            }
         }
     }
 

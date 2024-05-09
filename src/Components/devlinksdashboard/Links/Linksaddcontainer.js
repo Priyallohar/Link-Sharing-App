@@ -11,13 +11,12 @@ const Linksaddcontainer = () => {
     const [InputValue, setInputValue]=useState(null)
     const [chooseSvg, setSvg]=useState(null)
     function platformAddHandler(e) {
-
       let selectedPlatformName = e.currentTarget.getAttribute('aria-label');
       let selectedPlatform = platformSvgLink.find(platform => platform.name === selectedPlatformName);
       setInputValue(selectedPlatformName)
       setSvg(selectedPlatform.platformSvg)
+      setInputActivated(false)
     } 
-
 
   return (
     <div className="link-add">
@@ -49,7 +48,6 @@ const Linksaddcontainer = () => {
           placeholder="Select platform"
           value = {InputValue}
           onClick={() => setInputActivated(!isInputActivated)}
-         
         ></input>
 
        {isInputActivated &&
@@ -76,6 +74,7 @@ const Linksaddcontainer = () => {
          {uiIconSvgLink["link"]}
         <p className="link-title">Link</p>
         <input
+           className='url-links'
           type="url"
           placeholder="e.g. https://www.github.com/johnappleseed"
         ></input>
