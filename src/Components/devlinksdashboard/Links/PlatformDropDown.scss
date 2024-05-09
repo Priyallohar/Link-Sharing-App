@@ -32,6 +32,15 @@
                 padding-top: 10px;
             }
 
+            &:hover{
+                color:#633CFF ;
+            }
+            &:hover svg{
+                path{
+                    fill :#633CFF;  
+                 }
+            }
+
             &:first-child{
                 padding: 0px 0px;
                 padding-bottom: 10px;

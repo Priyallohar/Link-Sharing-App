@@ -56,10 +56,13 @@
                     background-color: #EFEBFF;
                 }
 
-                button {
+                .images-selection {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
                     height: 100%;
                     width: 193px;
-                    border: none;
                     background-color: #EFEBFF;
                     border-radius: 8px;
                     margin-right: 24px;
@@ -71,7 +74,7 @@
 
                     div {
                         color: #633CFF;
-                        font-weight: 700;
+                        font-weight: 600;
                     }
                 }
 
