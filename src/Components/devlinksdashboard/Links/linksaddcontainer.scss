@@ -20,25 +20,56 @@
         justify-content: space-between;
         flex-direction: row;
 
+        .link{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+        }
+
         .downarrow-svg {
             position: absolute;
             font-size: 35px;
-            justify-self: flex-end;
-            top: 32px;
-            right: 10px;
+            top:20px;
+            right: 15px;
             color: #633CFF;
             font-weight: 400;
+            transition: all 0.1s linear;
         }
+
+        .downarrow-clicked{
+            position: absolute;
+            font-size: 35px;
+            top:33px;
+            right: 15px;
+            color: #633CFF;
+            font-weight: 400;
+            transition: all 0.3s linear;
+            transform: rotateX(180deg);
+        }
+
     }
 
     .platform-container {
         position: relative;
         margin-bottom: 12px;
 
-        .platformlinks {
+        .platform-links {
             height: 48px;
             width: 100%;
             background-color: #FFFFFF;
+
+            &:focus{
+                outline: none;
+                border: 1px solid #633cff;
+                box-shadow: 0px 0px 20px 1px #beadff;
+                caret-color: #633cff;
+            }
+        }
+        .choosed-platform{
+           position: absolute;
+           top: 40px;
+           left: 15px;
         }
 
         
@@ -51,6 +82,15 @@
             position: absolute;
             top: 40px;
             left: 15px;
+        }
+
+        .url-links{
+            &:focus{
+                outline: none;
+                border: 1px solid #633cff;
+                box-shadow: 0px 0px 20px 1px #beadff;
+                caret-color: #633cff;
+            }
         }
     }
 

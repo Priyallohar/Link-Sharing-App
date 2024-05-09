@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+import React, { useState } from "react";
+import Links from "../Links/Links";
+import "./Dashboard.scss";
+import Preview from "../Preview/Preview";
+import ProfileDetails from "../ProfileDetails/ProfileDetails";
+import { Link } from "react-router-dom";
+import { uiIconSvgLink } from "../../../content";
+=======
 import React, { useState } from 'react';
 import DashboardHeader from '../DashboardHeader/DashboardHeader';
 import Links from '../Links/Links';
@@ -6,6 +15,7 @@ import Preview from '../Preview/Preview';
 import ProfileDetails from '../ProfileDetails/ProfileDetails';
 import { Link } from 'react-router-dom';
 import { uiIconSvgLink } from '../../../content';
+>>>>>>> origin
 
 const Dashboard = () => {
   const [islinkClick, setIsLinkClick] = useState(false);
@@ -25,7 +35,11 @@ const Dashboard = () => {
       <div className="dashboardheader-outer-container">
         <header className="dash-header">
           <div className="dash-title">
+<<<<<<< HEAD
+           {uiIconSvgLink.logodevlinkSmall}
+=======
             {uiIconSvgLink['logodevlinkSmall']}
+>>>>>>> origin
             <h2>devlinks</h2>
           </div>
 
