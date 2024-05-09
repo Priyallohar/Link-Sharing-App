@@ -1,7 +1,4 @@
 import React, { useState } from 'react'
-import { HiMenuAlt4 } from "react-icons/hi";
-import { RiArrowDropDownLine } from "react-icons/ri";
-import PlatformDropDown from "./PlatformDropDown";
 import "./linksaddcontainer.scss"
 import "./PlatformDropDown.scss"
 import {platformSvgLink , uiIconSvgLink} from "../../../content.js"
