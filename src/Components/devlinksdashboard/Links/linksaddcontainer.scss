@@ -30,9 +30,8 @@
         .downarrow-svg {
             position: absolute;
             font-size: 35px;
-            justify-self: flex-end;
-            top:120%;
-            right: 10px;
+            top:20px;
+            right: 15px;
             color: #633CFF;
             font-weight: 400;
             transition: all 0.1s linear;
@@ -41,12 +40,11 @@
         .downarrow-clicked{
             position: absolute;
             font-size: 35px;
-            justify-self: flex-end;
-            top:200%;
-            right: 10px;
+            top:33px;
+            right: 15px;
             color: #633CFF;
             font-weight: 400;
-            transition: all 0.5s linear;
+            transition: all 0.3s linear;
           transform: rotateX(180deg);
         }
 
@@ -56,10 +54,15 @@
         position: relative;
         margin-bottom: 12px;
 
-        .platformlinks {
+        .platform-links {
             height: 48px;
             width: 100%;
             background-color: #FFFFFF;
+        }
+        .choosed-platform{
+           position: absolute;
+           top: 40px;
+           left: 15px;
         }
 
         

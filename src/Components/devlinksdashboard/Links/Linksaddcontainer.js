@@ -9,12 +9,14 @@ import {platformSvgLink , uiIconSvgLink} from "../../../content.js"
 const Linksaddcontainer = () => {
     const[isInputActivated ,setInputActivated ]  = useState(false)
     const [InputValue, setInputValue]=useState(null)
+    const [chooseSvg, setSvg]=useState(null)
     function platformAddHandler(e) {
-      let selectedPlatform = platformSvgLink.find(platform => platform.name === e.target.ariaLabel)
-          setInputValue(selectedPlatform.name);
-          console.log(selectedPlatform.name, selectedPlatform.platformSvg , selectedPlatform)
-       } 
 
+      let selectedPlatformName = e.currentTarget.getAttribute('aria-label');
+      let selectedPlatform = platformSvgLink.find(platform => platform.name === selectedPlatformName);
+      setInputValue(selectedPlatformName)
+      setSvg(selectedPlatform.platformSvg)
+    } 
 
 
   return (
@@ -29,18 +31,25 @@ const Linksaddcontainer = () => {
       <div className="platform-container">
         <p className="platform-title">
           Platform{" "}
+
           <div className={isInputActivated?"downarrow-clicked":"downarrow-svg"}>
           {uiIconSvgLink.chevronDown}
           </div>
         </p>
         
 
+        <div className='choosed-platform'>
+        {chooseSvg}
+        </div>
+        
+
         <input
-          className="platformlinks"
+          className="platform-links"
           type=''
           placeholder="Select platform"
           value = {InputValue}
           onClick={() => setInputActivated(!isInputActivated)}
+         
         ></input>
 
        {isInputActivated &&
@@ -59,8 +68,9 @@ const Linksaddcontainer = () => {
        </ul>
    </div>} 
 
+     
 
-      </div>
+  </div>
 
       <div className="url-container">
          {uiIconSvgLink["link"]}
