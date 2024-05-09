@@ -20,15 +20,36 @@
         justify-content: space-between;
         flex-direction: row;
 
+        .link{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+        }
+
         .downarrow-svg {
             position: absolute;
             font-size: 35px;
             justify-self: flex-end;
-            top: 32px;
+            top:120%;
             right: 10px;
             color: #633CFF;
             font-weight: 400;
+            transition: all 0.1s linear;
         }
+
+        .downarrow-clicked{
+            position: absolute;
+            font-size: 35px;
+            justify-self: flex-end;
+            top:200%;
+            right: 10px;
+            color: #633CFF;
+            font-weight: 400;
+            transition: all 0.5s linear;
+          transform: rotateX(180deg);
+        }
+
     }
 
     .platform-container {

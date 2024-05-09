@@ -1,21 +1,20 @@
 
-import "./PlatformDropDown.scss"
-import {platformSvgLink} from "../../../content.js"
+// import "./PlatformDropDown.scss"
+// import {platformSvgLink} from "../../../content.js"
 
-const PlatformDropDown = () => {
-  return (
-    <div>
-      <div className="platform">
-        <ul className="platformList">
-          {platformSvgLink.map((platform) => (
-            <li key={platform.name} className="platformName">
-              {platform.platformSvg} <span>{platform.name}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  );
-}
 
-export default PlatformDropDown
+
+// const PlatformDropDown = () => {
+  
+//   function platformAddHandler(e) {
+//     console.log(platformSvgLink.find(platform => platform.name === e.target.ariaLabel));
+//   }  
+
+//   return (
+//     <div>
+     
+//     </div>
+//   );
+// }
+
+// export default PlatformDropDown
