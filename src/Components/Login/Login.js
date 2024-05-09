@@ -9,6 +9,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [showEmailError, setShowEmailError] = useState(false);
   const [showPasswordError, setShowPasswordError] = useState(false);
+  const [showLoading, setShowLoading] = useState(false);
 
   const HandleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -21,17 +22,10 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (email.trim() === '') {
-      setShowEmailError(true);
-    } else {
-      setShowEmailError(false);
-    }
+    //If email.trim() === "" evaluates to true, setShowEmailEmpty will be set to true; otherwise, it will be set to false.
 
-    if (password.trim() === '') {
-      setShowPasswordError(true);
-    } else {
-      setShowPasswordError(false);
-    }
+    setShowEmailError(email.trim() === '');
+    setShowPasswordError(password.trim() === '');
   };
 
   return (
@@ -60,7 +54,7 @@ const Login = () => {
               <input
                 className={showEmailError ? 'email-input-error' : 'email-input'}
                 type="email"
-                placeholder="eg.alex@gmail.com"
+                placeholder="alex@gmail.com"
                 value={email}
                 onChange={HandleEmailChange}
               ></input>
@@ -87,7 +81,7 @@ const Login = () => {
               ></input>
               {uiIconSvgLink['password']}
               {showPasswordError && (
-                <p className="empty-password"> Please check agian</p>
+                <p className="empty-password"> Please check again </p>
               )}
             </div>
             <Link to="/dashboard">

@@ -20,12 +20,7 @@ const Createaccount = () => {
 
   const passwordHandler = (e) => {
     setPassword(e.target.value);
-
-    if (e.target.value.length < 8) {
-      setPasswordLength(true);
-    } else {
-      setPasswordLength(false);
-    }
+    setPasswordLength(e.target.value.length < 8);
   };
 
   const confirmPasswordHandler = (e) => {
@@ -34,24 +29,10 @@ const Createaccount = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-
-    if (email.trim() === '') {
-      setShowEmailEmpty(true);
-    } else {
-      setShowEmailEmpty(false);
-    }
-
-    if (password.trim() === '') {
-      setShowPasswordEmpty(true);
-    } else {
-      setShowPasswordEmpty(false);
-    }
-
-    if (confirmPassword.trim() === '') {
-      setConfirmPasswordEmpty(true);
-    } else {
-      setConfirmPasswordEmpty(false);
-    }
+    //If email.trim() === "" evaluates to true, setShowEmailEmpty will be set to true; otherwise, it will be set to false.
+    setShowEmailEmpty(email.trim() === '');
+    setShowPasswordEmpty(password.trim() === '');
+    setConfirmPasswordEmpty(confirmPassword.trim() === '');
 
     if (password !== confirmPassword) {
       setPasswordMatch(true);
@@ -84,7 +65,7 @@ const Createaccount = () => {
               </p>
               <input
                 type="email"
-                placeholder="eg.alex@gmail.com"
+                placeholder="alex@gmail.com"
                 value={email}
                 onChange={emailHandler}
                 className={
